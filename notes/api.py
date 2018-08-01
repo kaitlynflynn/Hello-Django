@@ -18,4 +18,13 @@ class PersonalNoteViewSet(viewsets.ModelViewSet):
     """Describe the rows we want from the DB."""
 
     serializer_class = PersonalNoteSerializer
-    queryset = PersonalNote.objects.all()
+    queryset = PersonalNote.objects.none() # .all() returns ALL notes; .none() has been added with the below code to filter 
+
+    def get_queryset(self): # allowed us to customize what defaults we see for notes when logged in
+        # import pdb; pdb.set_trace()
+        user = self.request.user
+
+        if user.is_anonymous:
+            return PersonalNote.objects.none() # if user is anon, return none
+        else:
+            return PersonalNote.objects.filter(user=user) # otherwise return filtered

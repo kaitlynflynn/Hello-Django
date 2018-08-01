@@ -1,12 +1,12 @@
-from rest_framework import serializers, viewSets
+from rest_framework import serializers, viewsets
 from .models import PersonalNote
 
-class PersonalNoteSerializer(serializer.HyperLinkModelSerializer): 
+class PersonalNoteSerializer(serializers.HyperlinkedModelSerializer): 
     """Describe the model and fields we want to use."""
 
     class Meta: # subclass must be named meta
         model = PersonalNote
-        fields = ('title', 'content')
+        fields = ('title', 'content', 'url')
 
 class PersonalNoteViewSet(viewsets.ModelViewSet): 
     """Describe the rows we want from the DB."""

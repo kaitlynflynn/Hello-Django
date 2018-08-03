@@ -146,8 +146,8 @@ REST_FRAMEWORK = {
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# CONFIGURE DJANGO APP FOR HEROKU
+# # CONFIGURE DJANGO APP FOR HEROKU
 
-import django_heroku
+# import django_heroku
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())

@@ -143,3 +143,9 @@ REST_FRAMEWORK = {
     ]
 
 }
+
+# CONFIGURE DJANGO APP FOR HEROKU
+
+import django_heroku
+
+django_heroku.settings(locals())

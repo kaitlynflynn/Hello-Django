@@ -25,8 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = config('DEBUG', cast=bool) #turns into boolean
-DEBUG = False
+DEBUG = config('DEBUG', cast=bool) #turns into boolean
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
@@ -86,8 +85,9 @@ WSGI_APPLICATION = 'djorg.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
 DATABASES = {
-    'default': dj_database_url.config(default=config('DATABASE_URL') , conn_max_age=600)
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
 }
 
 

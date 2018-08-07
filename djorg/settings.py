@@ -60,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = ( #new 
-    'localhost:8000/'
+    'localhost:3000/'
 )
 
 ROOT_URLCONF = 'djorg.urls'

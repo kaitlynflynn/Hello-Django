@@ -160,6 +160,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
+GRAPHENE = {
+    'SCHEMA': 'notes.schema.schema'
+}
+
 # # CONFIGURE DJANGO APP FOR HEROKU
 
 # import django_heroku

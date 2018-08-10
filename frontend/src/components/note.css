@@ -1,0 +1,42 @@
+.App {
+    text-align: center;
+    background-color: lightslategray;
+  }
+  
+  h1 {
+    color: #4d9faf;
+    font-family: 'Pacifico', cursive;
+    font-size: 56px;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    margin-top: -285px;
+  }
+  
+  button {
+    background-color: #4d9faf;
+    color: black;
+    font-family: arial;
+    display: flex;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  form {
+    width: 100%;
+    margin-top: 155px;
+    /* background-color: red; */
+  }
+  
+  input { 
+    box-shadow: 8px 8px 8px #4d9faf;
+    text-align: center;
+    border-radius: 5%;
+    width: 50%;
+    height: 150%;
+    font-size: 25px;
+  }
